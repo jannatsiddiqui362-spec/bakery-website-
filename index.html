@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sweet Crumbs Bakery — handcrafted cakes, pastries and breads made fresh daily." />
+  <title>Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     LOADER
+     ============================================================ -->
+<div id="loader" class="loader">
+  <div class="loader-content">
+    <div class="loader-circle"></div>
+    <p>Sweet Crumbs Bakery</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">Sweet <span>Crumbs</span> Bakery</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a data-page="home"    class="active">Home</a></li>
+      <li><a data-page="menu">Menu</a></li>
+      <li><a data-page="about">About</a></li>
+      <li><a data-page="gallery">Gallery</a></li>
+      <li><a data-page="faq">FAQ</a></li>
+      <li><a data-page="contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-btn" onclick="toggleDark()">Dark Mode</button>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="float-shape s1"></div>
+    <div class="float-shape s2"></div>
+    <div class="float-shape s3"></div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Artisan Bakery Since 2012</div>
+        <h1>Baked Fresh,<br>Served with Love</h1>
+        <p class="tagline">Handcrafted cakes, pastries &amp; breads made daily from scratch in the heart of the city.</p>
+        <div class="hero-cta">
+          <button class="btn" id="hero-menu-btn">Explore Our Menu</button>
+          <button class="btn btn-outline" id="hero-contact-btn">Order Now</button>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&h=700&q=85" alt="Beautiful decorated birthday cake" />
+          <div class="hero-badge">
+            <span class="badge-num">&#9733; 4.9</span>
+            <span class="badge-label">500+ Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <span><span class="t-icon">&#10022;</span> Fresh Daily</span>
+    <span><span class="t-icon">&#9733;</span> Award-Winning</span>
+    <span><span class="t-icon">&#9670;</span> Local Delivery</span>
+    <span><span class="t-icon">&#9671;</span> Custom Orders</span>
+  </div>
+
+  <div class="container">
+
+    <!-- Featured Favourites -->
+    <section>
+      <h2 class="section-title">Featured Favourites</h2>
+      <p class="section-sub">A taste of what keeps our customers coming back</p>
+      <div class="grid">
+
+        <div class="reveal card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&h=400&q=80" alt="Classic Chocolate Cake" loading="eager" />
+          <div class="card-body">
+            <h3>Classic Chocolate Cake</h3>
+            <p>Rich layers of moist chocolate sponge filled with silky ganache and finished with a glossy chocolate glaze.</p>
+            <div class="card-footer">
+              <span class="price">$32.00</span>
+              <button class="btn" style="padding:8px 20px;font-size:.88rem" onclick="navigate('menu')">View Menu</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&h=400&q=80" alt="Vanilla Bean Cupcakes" loading="eager" />
+          <div class="card-body">
+            <h3>Vanilla Bean Cupcakes</h3>
+            <p>Light vanilla cupcakes topped with whipped buttercream and a sprinkle of toasted coconut.</p>
+            <div class="card-footer">
+              <span class="price">$3.50</span>
+              <button class="btn" style="padding:8px 20px;font-size:.88rem" onclick="navigate('menu')">View Menu</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card">
+          <span class="badge new">New</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=400&q=80" alt="Buttery Croissants" loading="lazy" />
+          <div class="card-body">
+            <h3>Buttery Croissants</h3>
+            <p>Flaky, golden croissants made with French butter, baked fresh every morning until 11 AM.</p>
+            <div class="card-footer">
+              <span class="price">$2.75</span>
+              <button class="btn" style="padding:8px 20px;font-size:.88rem" onclick="navigate('menu')">View Menu</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&h=400&q=80" alt="Sourdough Loaf" loading="lazy" />
+          <div class="card-body">
+            <h3>Sourdough Loaf</h3>
+            <p>Naturally fermented for 24 hours, resulting in a crisp crust and a soft, tangy crumb.</p>
+            <div class="card-footer">
+              <span class="price">$6.00</span>
+              <button class="btn" style="padding:8px 20px;font-size:.88rem" onclick="navigate('menu')">View Menu</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section>
+      <h2 class="section-title">Why Choose Sweet Crumbs</h2>
+      <p class="section-sub">What sets our bakery apart from the rest</p>
+      <div class="features">
+        <div class="reveal feature"><div class="icon">I</div><h3>Fresh Daily</h3><p>Everything is baked from scratch every morning using premium, locally sourced ingredients.</p></div>
+        <div class="reveal feature"><div class="icon">II</div><h3>Custom Orders</h3><p>From birthdays to weddings, our team designs personalised cakes tailored to your celebration.</p></div>
+        <div class="reveal feature"><div class="icon">III</div><h3>Expert Bakers</h3><p>Our pastry chefs bring decades of combined experience and a genuine passion for baking.</p></div>
+        <div class="reveal feature"><div class="icon">IV</div><h3>Quality Ingredients</h3><p>We use real butter, free-range eggs, and Belgian chocolate — no shortcuts, ever.</p></div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section>
+      <h2 class="section-title">Special Offers</h2>
+      <p class="section-sub">Sweet deals, just for you</p>
+      <div class="offers">
+        <div class="reveal offer-card"><div class="offer-tag">This Week</div><h3>10% Off Custom Cakes</h3><p>Order any custom celebration cake and get 10% off when booked 5+ days in advance.</p></div>
+        <div class="reveal offer-card"><div class="offer-tag">Weekday Special</div><h3>Buy 5, Get 1 Free</h3><p>Mix and match any croissants or pastries — every 6th one is on us, Monday to Friday.</p></div>
+        <div class="reveal offer-card"><div class="offer-tag">Loyalty</div><h3>Free Birthday Cupcakes</h3><p>Sign up for our newsletter and receive a free box of cupcakes on your birthday month.</p></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Real feedback from our bakery family</p>
+      <div class="testimonials">
+
+        <div class="reveal testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The custom birthday cake exceeded every expectation — both in taste and design. Our guests couldn't stop talking about it."</p>
+          <div class="author">
+            <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Amara Lewis" />
+            <div><strong>Amara Lewis</strong><br><small style="opacity:.75">Loyal Customer</small></div>
+          </div>
+        </div>
+
+        <div class="reveal testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Their sourdough is the best I've had outside of Europe. I now visit every Saturday morning without fail."</p>
+          <div class="author">
+            <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Daniel Brooks" />
+            <div><strong>Daniel Brooks</strong><br><small style="opacity:.75">Regular Visitor</small></div>
+          </div>
+        </div>
+
+        <div class="reveal testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Sweet Crumbs catered our office party with a beautiful pastry platter. Professional, prompt, and absolutely delicious."</p>
+          <div class="author">
+            <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah Mitchell" />
+            <div><strong>Sarah Mitchell</strong><br><small style="opacity:.75">Event Organiser</small></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section>
+      <div class="reveal cta-banner">
+        <h2>Planning a Special Celebration?</h2>
+        <p>Let us craft a custom cake that matches your vision perfectly. Order at least 48 hours in advance.</p>
+        <button class="btn" id="cta-contact-btn">Get In Touch</button>
+      </div>
+    </section>
+
+    <!-- Instagram Grid -->
+    <section>
+      <h2 class="section-title">Follow Us @SweetCrumbsBakery</h2>
+      <p class="section-sub">Daily inspiration from our kitchen to your feed</p>
+      <div class="insta-grid">
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=300&h=300&q=75" alt="bakery" loading="lazy" /><span class="insta-tag">@sweetcrumbs</span></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section>
+      <div class="reveal newsletter">
+        <h2 class="section-title" style="margin-bottom:8px">Join Our Newsletter</h2>
+        <p class="section-sub" style="margin-bottom:0">Weekly updates on new flavours, seasonal specials, and exclusive offers</p>
+        <form id="newsletter-form">
+          <input id="newsletter-email" type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="newsletter-success" id="newsletter-success">Thank you for subscribing!</p>
+      </div>
+    </section>
+
+  </div><!-- /container -->
+</div><!-- /page-home -->
+
+<!-- ============================================================
+     PAGE: MENU
+     ============================================================ -->
+<div id="page-menu" class="page">
+
+  <div class="page-header">
+    <h1>Our Menu</h1>
+    <p>Freshly made every day, from classic favourites to seasonal specials</p>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:80px">
+
+    <div class="menu-search">
+      <input type="text" placeholder="Search cakes, cookies, bread&#8230;" oninput="handleMenuSearch(event)" />
+    </div>
+
+    <!-- Cakes -->
+    <div class="category-block">
+      <h2 class="category-title">Cakes</h2>
+      <div class="grid">
+
+        <div class="card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&h=400&q=80" alt="Classic Chocolate Cake" loading="lazy" />
+          <div class="card-body">
+            <h3>Classic Chocolate Cake</h3>
+            <p>Three layers of dark chocolate sponge with ganache filling and smooth chocolate frosting.</p>
+            <div class="card-footer"><span class="price">$32.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&h=400&q=80" alt="Red Velvet Cake" loading="lazy" />
+          <div class="card-body">
+            <h3>Red Velvet Cake</h3>
+            <p>Soft cocoa sponge with a hint of tang, layered with rich cream cheese frosting.</p>
+            <div class="card-footer"><span class="price">$35.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&h=400&q=80" alt="Lemon Drizzle Cake" loading="lazy" />
+          <div class="card-body">
+            <h3>Lemon Drizzle Cake</h3>
+            <p>Light sponge soaked in fresh lemon syrup and topped with a tangy lemon glaze.</p>
+            <div class="card-footer"><span class="price">$28.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge new">New</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&h=400&q=80" alt="Carrot Walnut Cake" loading="lazy" />
+          <div class="card-body">
+            <h3>Carrot Walnut Cake</h3>
+            <p>Moist spiced carrot cake studded with walnuts and topped with cream cheese icing.</p>
+            <div class="card-footer"><span class="price">$30.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Cupcakes -->
+    <div class="category-block">
+      <h2 class="category-title">Cupcakes</h2>
+      <div class="grid">
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&h=400&q=80" alt="Vanilla Bean Cupcake" loading="lazy" />
+          <div class="card-body">
+            <h3>Vanilla Bean Cupcake</h3>
+            <p>Fluffy vanilla cupcake topped with whipped vanilla bean buttercream.</p>
+            <div class="card-footer"><span class="price">$3.50</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=600&h=400&q=80" alt="Chocolate Fudge Cupcake" loading="lazy" />
+          <div class="card-body">
+            <h3>Chocolate Fudge Cupcake</h3>
+            <p>Decadent chocolate cupcake with a fudge centre and chocolate buttercream swirl.</p>
+            <div class="card-footer"><span class="price">$3.75</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1563729784474-d77dca82f374?auto=format&fit=crop&w=600&h=400&q=80" alt="Red Velvet Cupcake" loading="lazy" />
+          <div class="card-body">
+            <h3>Red Velvet Cupcake</h3>
+            <p>Mini version of our beloved red velvet cake, topped with cream cheese frosting.</p>
+            <div class="card-footer"><span class="price">$3.75</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge new">New</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&h=400&q=80" alt="Salted Caramel Cupcake" loading="lazy" />
+          <div class="card-body">
+            <h3>Salted Caramel Cupcake</h3>
+            <p>Brown sugar cupcake filled with caramel and topped with salted caramel frosting.</p>
+            <div class="card-footer"><span class="price">$4.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Cookies -->
+    <div class="category-block">
+      <h2 class="category-title">Cookies</h2>
+      <div class="grid">
+
+        <div class="card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&h=400&q=80" alt="Chocolate Chip Cookie" loading="lazy" />
+          <div class="card-body">
+            <h3>Chocolate Chip Cookie</h3>
+            <p>Crispy edges, chewy centres, and generous chunks of chocolate.</p>
+            <div class="card-footer"><span class="price">$2.25</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=400&q=80" alt="Oatmeal Raisin Cookie" loading="lazy" />
+          <div class="card-body">
+            <h3>Oatmeal Raisin Cookie</h3>
+            <p>Hearty oats and plump raisins in a soft, lightly spiced cookie.</p>
+            <div class="card-footer"><span class="price">$2.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1607920592519-bab2a80efd49?auto=format&fit=crop&w=600&h=400&q=80" alt="Double Chocolate Cookie" loading="lazy" />
+          <div class="card-body">
+            <h3>Double Chocolate Cookie</h3>
+            <p>Cocoa-rich dough loaded with dark and milk chocolate chunks.</p>
+            <div class="card-footer"><span class="price">$2.50</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1598568552946-b09f9c429c31?auto=format&fit=crop&w=600&h=400&q=80" alt="Shortbread Cookie" loading="lazy" />
+          <div class="card-body">
+            <h3>Shortbread Cookie</h3>
+            <p>Buttery, crumbly shortbread finished with a dusting of fine sugar.</p>
+            <div class="card-footer"><span class="price">$2.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pastries -->
+    <div class="category-block">
+      <h2 class="category-title">Pastries</h2>
+      <div class="grid">
+
+        <div class="card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=400&q=80" alt="Butter Croissant" loading="lazy" />
+          <div class="card-body">
+            <h3>Butter Croissant</h3>
+            <p>Flaky, golden layers made with premium French butter, baked fresh each morning.</p>
+            <div class="card-footer"><span class="price">$2.75</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=600&h=400&q=80" alt="Almond Croissant" loading="lazy" />
+          <div class="card-body">
+            <h3>Almond Croissant</h3>
+            <p>Twice-baked croissant filled with almond cream and topped with sliced almonds.</p>
+            <div class="card-footer"><span class="price">$3.50</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge new">New</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1609951651556-5334e2706168?auto=format&fit=crop&w=600&h=400&q=80" alt="Cinnamon Roll" loading="lazy" />
+          <div class="card-body">
+            <h3>Cinnamon Roll</h3>
+            <p>Soft, swirled dough filled with cinnamon sugar and topped with cream cheese icing.</p>
+            <div class="card-footer"><span class="price">$3.75</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1559598467-f8b76c8155d0?auto=format&fit=crop&w=600&h=400&q=80" alt="Fruit Danish" loading="lazy" />
+          <div class="card-body">
+            <h3>Fruit Danish</h3>
+            <p>Light pastry filled with vanilla custard and seasonal fresh fruit.</p>
+            <div class="card-footer"><span class="price">$3.25</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bread -->
+    <div class="category-block">
+      <h2 class="category-title">Bread</h2>
+      <div class="grid">
+
+        <div class="card">
+          <span class="badge best">Best Seller</span>
+          <img class="card-img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&h=400&q=80" alt="Sourdough Loaf" loading="lazy" />
+          <div class="card-body">
+            <h3>Sourdough Loaf</h3>
+            <p>Naturally leavened for 24 hours, with a crisp crust and tangy, airy crumb.</p>
+            <div class="card-footer"><span class="price">$6.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=600&h=400&q=80" alt="Whole Wheat Loaf" loading="lazy" />
+          <div class="card-body">
+            <h3>Whole Wheat Loaf</h3>
+            <p>Hearty loaf made with stone-ground whole wheat flour and a touch of honey.</p>
+            <div class="card-footer"><span class="price">$5.50</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&h=400&q=80" alt="Classic Baguette" loading="lazy" />
+          <div class="card-body">
+            <h3>Classic Baguette</h3>
+            <p>Traditional French baguette with a crackling crust and soft, chewy interior.</p>
+            <div class="card-footer"><span class="price">$3.00</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1586444248879-bc604fa09f1a?auto=format&fit=crop&w=600&h=400&q=80" alt="Multigrain Loaf" loading="lazy" />
+          <div class="card-body">
+            <h3>Multigrain Loaf</h3>
+            <p>A wholesome blend of oats, flax, and sunflower seeds for a nutty, satisfying bite.</p>
+            <div class="card-footer"><span class="price">$6.50</span><button class="order-btn">Order Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page-menu -->
+
+<!-- ============================================================
+     PAGE: ABOUT
+     ============================================================ -->
+<div id="page-about" class="page">
+
+  <div class="page-header">
+    <h1>About Sweet Crumbs Bakery</h1>
+    <p>A family tradition of baking, served with passion since day one</p>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:80px">
+
+    <section>
+      <h2 class="section-title">Our Story</h2>
+      <p style="max-width:780px;margin:0 auto;text-align:center;opacity:.88;font-size:1rem;line-height:1.85">
+        Sweet Crumbs Bakery began in 2012 as a small family kitchen with a single oven and a big dream: to bring honest, handcrafted baked goods to our neighbourhood. What started as weekend bread sales at the local farmers market has grown into a beloved community bakery, but our values have never changed. Every cake, loaf, and pastry is still made by hand, in small batches, using traditional techniques passed down through generations.
+      </p>
+    </section>
+
+    <section>
+      <div class="features" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="feature reveal"><div class="icon">M</div><h3>Our Mission</h3><p>To bake exceptional, honest food using quality ingredients, and to share it with our community through warm, personal service every single day.</p></div>
+        <div class="feature reveal"><div class="icon">V</div><h3>Our Vision</h3><p>To be the neighbourhood's most trusted bakery — a place where every celebration, big or small, begins with something freshly baked.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Meet Our Bakers</h2>
+      <p class="section-sub">The talented hands behind every creation</p>
+      <div class="bakers">
+
+        <div class="baker-card reveal">
+          <img class="baker-photo" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&h=300&q=80" alt="Eleanor Marsh" />
+          <div class="info">
+            <h4>Eleanor Marsh</h4>
+            <div class="role">Head Pastry Chef &amp; Founder</div>
+            <p>With over 20 years of experience, Eleanor leads our cake design and recipe development.</p>
+          </div>
+        </div>
+
+        <div class="baker-card reveal">
+          <img class="baker-photo" src="https://images.unsplash.com/photo-1559561853-08451507cbe7?auto=format&fit=crop&w=400&h=300&q=80" alt="James Turner" />
+          <div class="info">
+            <h4>James Turner</h4>
+            <div class="role">Bread &amp; Pastry Specialist</div>
+            <p>James trained in classic French techniques and oversees our daily bread and croissant production.</p>
+          </div>
+        </div>
+
+        <div class="baker-card reveal">
+          <img class="baker-photo" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&h=300&q=80" alt="Riya Patel" />
+          <div class="info">
+            <h4>Riya Patel</h4>
+            <div class="role">Cake Decorator</div>
+            <p>Riya brings custom cake designs to life, from elegant weddings to playful birthday creations.</p>
+          </div>
+        </div>
+
+        <div class="baker-card reveal">
+          <img class="baker-photo" src="https://images.unsplash.com/photo-1574797368524-69e00a5c68b9?auto=format&fit=crop&w=400&h=300&q=80" alt="Carlos Ortiz" />
+          <div class="info">
+            <h4>Carlos Ortiz</h4>
+            <div class="role">Cookie &amp; Cupcake Baker</div>
+            <p>Carlos specialises in small-batch cookies and cupcakes, always experimenting with new flavours.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card reveal"><h4>Quality First</h4><p>We never compromise on ingredients, recipes, or care.</p></div>
+        <div class="value-card reveal"><h4>Community Focused</h4><p>We support local farmers and give back to our neighbourhood.</p></div>
+        <div class="value-card reveal"><h4>Made Fresh Daily</h4><p>Nothing sits on our shelves overnight — everything is baked the same day.</p></div>
+        <div class="value-card reveal"><h4>Personal Service</h4><p>We treat every customer like family, every single visit.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Sweet Crumbs By The Numbers</h2>
+      <div class="stats">
+        <div class="stat-box"><div class="num" data-target="12">0</div><p>Years in Business</p></div>
+        <div class="stat-box"><div class="num" data-target="50">0</div><p>Daily Recipes</p></div>
+        <div class="stat-box"><div class="num" data-target="15000">0</div><p>Cakes Baked</p></div>
+        <div class="stat-box"><div class="num" data-target="98">0</div><p>% Happy Customers</p></div>
+      </div>
+    </section>
+
+  </div>
+</div><!-- /page-about -->
+
+<!-- ============================================================
+     PAGE: GALLERY
+     ============================================================ -->
+<div id="page-gallery" class="page">
+
+  <div class="page-header">
+    <h1>Our Gallery</h1>
+    <p>A visual feast of our favourite creations</p>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:80px">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-cat="all"      onclick="setFilter('all')">All</button>
+      <button class="filter-btn"        data-cat="cakes"    onclick="setFilter('cakes')">Cakes</button>
+      <button class="filter-btn"        data-cat="cupcakes" onclick="setFilter('cupcakes')">Cupcakes</button>
+      <button class="filter-btn"        data-cat="cookies"  onclick="setFilter('cookies')">Cookies</button>
+      <button class="filter-btn"        data-cat="bread"    onclick="setFilter('bread')">Bread</button>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item" data-cat="cakes" onclick="openLightbox('https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=500&h=600&q=80','Wedding Cake Elegance')">
+        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=500&h=600&q=80" alt="Wedding Cake Elegance" loading="lazy" />
+        <div class="gallery-overlay">Wedding Cake Elegance</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cupcakes" onclick="openLightbox('https://images.unsplash.com/photo-1563729784474-d77dca82f374?auto=format&fit=crop&w=500&h=400&q=80','Rainbow Cupcake Tower')">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dca82f374?auto=format&fit=crop&w=500&h=400&q=80" alt="Rainbow Cupcake Tower" loading="lazy" />
+        <div class="gallery-overlay">Rainbow Cupcake Tower</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cookies" onclick="openLightbox('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&h=500&q=80','Holiday Cookie Box')">
+        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&h=500&q=80" alt="Holiday Cookie Box" loading="lazy" />
+        <div class="gallery-overlay">Holiday Cookie Box</div>
+      </div>
+
+      <div class="gallery-item" data-cat="bread" onclick="openLightbox('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&h=400&q=80','Artisan Bread Basket')">
+        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&h=400&q=80" alt="Artisan Bread Basket" loading="lazy" />
+        <div class="gallery-overlay">Artisan Bread Basket</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cakes" onclick="openLightbox('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&h=700&q=80','Birthday Drip Cake')">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&h=700&q=80" alt="Birthday Drip Cake" loading="lazy" />
+        <div class="gallery-overlay">Birthday Drip Cake</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cupcakes" onclick="openLightbox('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=500&h=450&q=80','Floral Cupcake Display')">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=500&h=450&q=80" alt="Floral Cupcake Display" loading="lazy" />
+        <div class="gallery-overlay">Floral Cupcake Display</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cookies" onclick="openLightbox('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=400&q=80','Decorated Sugar Cookies')">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=400&q=80" alt="Decorated Sugar Cookies" loading="lazy" />
+        <div class="gallery-overlay">Decorated Sugar Cookies</div>
+      </div>
+
+      <div class="gallery-item" data-cat="bread" onclick="openLightbox('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&h=500&q=80','Fresh Sourdough Display')">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&h=500&q=80" alt="Fresh Sourdough Display" loading="lazy" />
+        <div class="gallery-overlay">Fresh Sourdough Display</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cakes" onclick="openLightbox('https://images.unsplash.com/photo-1611293388250-580b08c4a145?auto=format&fit=crop&w=500&h=600&q=80','Three-Tier Anniversary Cake')">
+        <img src="https://images.unsplash.com/photo-1611293388250-580b08c4a145?auto=format&fit=crop&w=500&h=600&q=80" alt="Three-Tier Anniversary Cake" loading="lazy" />
+        <div class="gallery-overlay">Three-Tier Anniversary Cake</div>
+      </div>
+
+      <div class="gallery-item" data-cat="bread" onclick="openLightbox('https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&h=400&q=80','Whole Grain Loaf')">
+        <img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&h=400&q=80" alt="Whole Grain Loaf" loading="lazy" />
+        <div class="gallery-overlay">Whole Grain Loaf</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cookies" onclick="openLightbox('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&h=500&q=80','Chocolate Chip Stack')">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&h=500&q=80" alt="Chocolate Chip Stack" loading="lazy" />
+        <div class="gallery-overlay">Chocolate Chip Stack</div>
+      </div>
+
+      <div class="gallery-item" data-cat="cupcakes" onclick="openLightbox('https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=500&h=450&q=80','Seasonal Pumpkin Cupcakes')">
+        <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=500&h=450&q=80" alt="Seasonal Pumpkin Cupcakes" loading="lazy" />
+        <div class="gallery-overlay">Seasonal Pumpkin Cupcakes</div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-gallery -->
+
+<!-- ============================================================
+     PAGE: FAQ
+     ============================================================ -->
+<div id="page-faq" class="page">
+
+  <div class="page-header">
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know before placing an order</p>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:80px;max-width:800px">
+
+    <div class="faq-item">
+      <div class="faq-question">Do you make custom cakes?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>Yes! We specialize in custom cakes for birthdays, weddings, anniversaries, and corporate events. Simply contact us with your design ideas, flavor preferences, and event date, and our team will create a personalized quote for you.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I place an order?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>Orders can be placed through our contact form, by phone, or in person at our bakery counter. For custom cakes, we recommend reaching out as early as possible to discuss design and flavor options.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer delivery?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>Yes, we offer local delivery within a 10-mile radius of our bakery for a small fee. Delivery availability and timing depend on order size and the date requested, so please confirm details when placing your order.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What payment methods are accepted?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>We accept cash, all major credit and debit cards, and popular digital payment methods. Custom orders typically require a deposit at the time of booking, with the balance due upon pickup or delivery.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How many days in advance should I order?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>For everyday items like bread and pastries, no advance notice is needed. For custom cakes and large orders, we recommend placing your order at least 3 to 5 days in advance, and 2 to 3 weeks for wedding cakes during busy seasons.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you cater events and office parties?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>Absolutely! We offer event catering with custom pastry platters, cake displays, and bread selections. Our team will work with you to create a spread that impresses your guests and suits your budget.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Are any of your products gluten-free or vegan?<span class="faq-icon">+</span></div>
+      <div class="faq-answer"><p>We offer a small selection of gluten-free and vegan-friendly baked goods. Please let us know about any dietary requirements when placing your order so we can accommodate you.</p></div>
+    </div>
+
+  </div>
+</div><!-- /page-faq -->
+
+<!-- ============================================================
+     PAGE: CONTACT
+     ============================================================ -->
+<div id="page-contact" class="page">
+
+  <div class="page-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you — reach out anytime</p>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:80px">
+
+    <div class="contact-grid">
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <div class="success-msg" id="contact-success">Thank you! Your message has been sent successfully.</div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" />
+            <div class="error-msg">Please enter your name.</div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" />
+            <div class="error-msg">Please enter a valid email address.</div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(123) 456-7890" />
+            <div class="error-msg">Please enter a valid phone number.</div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Tell us about your order or inquiry&#8230;"></textarea>
+            <div class="error-msg">Please enter a message.</div>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="icon">H</div>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Mon &ndash; Fri: 7:00 AM &ndash; 7:00 PM<br />Saturday: 7:00 AM &ndash; 6:00 PM<br />Sunday: 8:00 AM &ndash; 4:00 PM</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon">A</div>
+          <div>
+            <h4>Address</h4>
+            <p>123 Maple Street, Brookville, NY 11201</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon">P</div>
+          <div>
+            <h4>Phone &amp; Email</h4>
+            <p>(555) 123-4567<br />hello@sweetcrumbsbakery.com</p>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=New+York&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" title="Bakery location map"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Custom Cake Inquiry -->
+    <section style="margin-top:72px">
+      <h2 class="section-title">Custom Cake Inquiry</h2>
+      <p class="section-sub">Tell us about your dream cake and we'll get back to you with a quote</p>
+
+      <div class="contact-form" style="max-width:720px;margin:0 auto">
+        <div class="success-msg" id="cake-success">Thank you! Your custom cake inquiry has been received &mdash; we'll be in touch soon.</div>
+        <form id="cake-form" novalidate>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" />
+            <div class="error-msg">Please enter your name.</div>
+          </div>
+          <div class="form-group">
+            <label>Occasion</label>
+            <select>
+              <option value="">Select an occasion</option>
+              <option>Birthday</option>
+              <option>Wedding</option>
+              <option>Anniversary</option>
+              <option>Corporate Event</option>
+              <option>Other</option>
+            </select>
+            <div class="error-msg">Please select an occasion.</div>
+          </div>
+          <div class="form-group">
+            <label>Date Needed</label>
+            <input type="date" />
+            <div class="error-msg">Please select a date.</div>
+          </div>
+          <div class="form-group">
+            <label>Cake Details</label>
+            <textarea rows="4" placeholder="Describe your dream cake&#8230;"></textarea>
+            <div class="error-msg">Please share some details about your cake.</div>
+          </div>
+          <button type="submit" class="btn">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div><!-- /page-contact -->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h3>Sweet Crumbs Bakery</h3>
+        <p style="opacity:.86;font-size:.93rem;line-height:1.75">Handcrafted cakes, pastries, and bread baked fresh every day with love and the finest ingredients since 2012.</p>
+        <span class="quick-order-btn" id="quick-order-btn">Quick Order</span>
+      </div>
+
+      <div>
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Mon &ndash; Fri: 7:00 AM &ndash; 7:00 PM</li>
+          <li>Saturday: 7:00 AM &ndash; 6:00 PM</li>
+          <li>Sunday: 8:00 AM &ndash; 4:00 PM</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a data-page="home">Home</a></li>
+          <li><a data-page="menu">Menu</a></li>
+          <li><a data-page="about">About</a></li>
+          <li><a data-page="gallery">Gallery</a></li>
+          <li><a data-page="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Get In Touch</h3>
+        <ul>
+          <li>123 Maple Street, Brookville, NY 11201</li>
+          <li>(555) 123-4567</li>
+          <li>hello@sweetcrumbsbakery.com</li>
+          <li><a href="https://maps.google.com/?q=New+York" target="_blank" rel="noopener">View on Google Maps</a></li>
+        </ul>
+        <h3 style="margin-top:20px">Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Instagram">In</a>
+          <a href="#" aria-label="Twitter">Tw</a>
+          <a href="#" aria-label="Pinterest">Pi</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+    <img id="lb-img" src="" alt="" />
+    <h3 id="lb-title"></h3>
+    <p>A closer look at one of our signature creations, made fresh in our kitchen.</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     FLOATING BUTTONS
+     ============================================================ -->
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<button id="scroll-top-btn" class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
